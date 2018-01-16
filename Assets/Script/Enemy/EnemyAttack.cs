@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour {
 
-    [SerializeField] float timeBetweenAttacks = 0.5f;     // The time in seconds between each attack.
-    [SerializeField] int attackDamage = 10;               // The amount of health taken away per attack.
+    [SerializeField] float timeBetweenAttacks = 0.5f;
+    [SerializeField] int attackDamage = 10;
 
-
-    Animator anim;                              // Reference to the animator component.
-    GameObject player;                          // Reference to the player GameObject.
-    PlayerHealth playerHealth;                  // Reference to the player's health.
-    EnemyHealth enemyHealth;                    // Reference to this enemy's health.
-    bool playerInRange;                         // Whether player is within the trigger collider and can be attacked.
-    float timer;                                // Timer for counting up to the next attack.
+    Animator anim;
+    GameObject player;
+    PlayerHealth playerHealth;
+    EnemyHealth enemyHealth;
+    FlyingEnemy flyingEnemy;
+    bool playerInRange;
+    float timer;
 
 
     void Awake()
@@ -23,6 +23,7 @@ public class EnemyAttack : MonoBehaviour {
         playerHealth = player.GetComponent<PlayerHealth>();
         enemyHealth = GetComponent<EnemyHealth>();
         anim = GetComponent<Animator>();
+        flyingEnemy = GetComponent<FlyingEnemy>();
     }
 
 
@@ -57,7 +58,13 @@ public class EnemyAttack : MonoBehaviour {
 
         if (playerHealth.HitPointsRemaining > 0)
         {
-            playerHealth.TakeDamage(attackDamage);
+            playerHealth.TakeDamage(attackDamage, transform.position);
+
+            if (flyingEnemy != null)
+            {
+                flyingEnemy.isAttacking = false;
+                flyingEnemy.isRetreating = true;
+            }
         }
     }
 }

@@ -9,6 +9,8 @@ public class EnemyHealth : Destructable
     [SerializeField] AudioClip hurtClip;
     [SerializeField] AudioClip deathClip;
 
+    private ParticleSystem hitParticles;
+
     private bool isSinking;
     public bool IsSinking
     {
@@ -24,6 +26,7 @@ public class EnemyHealth : Destructable
     {
         enemyAudio = GetComponent<AudioSource>();
         enemyAnimator = GetComponent<Animator>();
+        hitParticles = GetComponentInChildren<ParticleSystem>();
     }
 
     public override void Die()
@@ -31,25 +34,34 @@ public class EnemyHealth : Destructable
         enemyAudio.clip = deathClip;
         enemyAudio.Play();
 
-        enemyAnimator.SetTrigger("DieTrigger");
+        if(enemyAnimator != null)
+            enemyAnimator.SetTrigger("DieTrigger");
 
         ScoreController.score += scoreValue;
 
         base.Die();
     }
 
-    public override void TakeDamage(float amount)
+    public override void TakeDamage(float amount, Vector3 hitPosition)
     {
-        if (enemyAudio.clip != hurtClip)
-            enemyAudio.clip = hurtClip;
-        enemyAudio.Play();
+        if (isAlive)
+        {
+            if (enemyAudio.clip != hurtClip)
+                enemyAudio.clip = hurtClip;
+            enemyAudio.Play();
 
-        base.TakeDamage(amount);
+            hitParticles.transform.position = new Vector3(hitPosition.x, hitParticles.transform.position.y, hitPosition.z);
+            hitParticles.transform.rotation = Quaternion.LookRotation(hitPosition);
+            hitParticles.Play();
+        }
+
+        base.TakeDamage(amount, hitPosition);
     }
 
     public void StartSinking()
     {
-        GetComponent<NavMeshAgent>().enabled = false;
+        if(GetComponent<NavMeshAgent>() != null)
+            GetComponent<NavMeshAgent>().enabled = false;
 
         GetComponent<Rigidbody>().isKinematic = true;
 

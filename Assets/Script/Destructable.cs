@@ -35,8 +35,11 @@ public class Destructable : MonoBehaviour {
             OnDeath();
     }
 
-    public virtual void TakeDamage(float amount)
+    public virtual void TakeDamage(float amount, Vector3 hitPosition)
     {
+        if (!isAlive)
+            return;
+
         damageTaken += amount;
 
         if (OnDamageReceived != null)

@@ -13,9 +13,9 @@ public class Wall : Destructable {
         GameManager.Instance.Respawner.Despawn(gameObject, inSeconds);
     }
 
-    public override void TakeDamage(float amount)
+    public override void TakeDamage(float amount, Vector3 hitPosition)
     {
-        base.TakeDamage(amount);
+        base.TakeDamage(amount, hitPosition);
         print("Remaining: " + HitPointsRemaining);
     }
 }

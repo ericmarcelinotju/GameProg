@@ -20,7 +20,7 @@ public class PlayerHealth : Destructable
         base.Die();
     }
 
-    public override void TakeDamage(float amount)
+    public override void TakeDamage(float amount, Vector3 hitPosition)
     {
         damaged = true;
 
@@ -28,7 +28,7 @@ public class PlayerHealth : Destructable
             Player.Instance.PlayerAudio.clip = hurtClip;
         Player.Instance.PlayerAudio.Play();
 
-        base.TakeDamage(amount);
+        base.TakeDamage(amount, hitPosition);
 
         healthSlider.value = HitPointsRemaining;
     }
