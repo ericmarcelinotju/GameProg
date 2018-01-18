@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class LevelManager : MonoBehaviour {
 
@@ -30,6 +31,7 @@ public class LevelManager : MonoBehaviour {
     void Update () {
         if(LevelIndex >= Levels.Length)
         {
+            File.WriteAllLines("score.txt", new string[] { ScoreController.score + "" });
             SceneManager.LoadScene("Ending");
         }
         else if (CurrLevel.isFinish)

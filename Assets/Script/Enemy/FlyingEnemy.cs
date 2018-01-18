@@ -5,7 +5,7 @@ using UnityEngine;
 public class FlyingEnemy : Enemy
 {
 
-    [SerializeField] float movementSpeed = 10f;
+    [SerializeField] float movementSpeed = 5f;
     [SerializeField] float rotationalDamp = .5f;
 
     [SerializeField] float detectionDistance = 10f;
@@ -39,12 +39,10 @@ public class FlyingEnemy : Enemy
 
     void Update()
     {
-
-        Debug.Log("Retreat = " + isRetreating);
-        Debug.Log("Attack = " + isAttacking);
         if (enemyHealth.HitPointsRemaining <= 0)
         {
             transform.Translate(-Vector3.up * 2.5f * Time.deltaTime);
+            Destroy(gameObject, 2f);
             return;
         }
 
@@ -54,7 +52,7 @@ public class FlyingEnemy : Enemy
         }
         if (isAttacking)
         {
-            transform.position = Vector3.Lerp(transform.position, target.position, 4f * Time.deltaTime);
+            transform.position = Vector3.Slerp(transform.position, target.position, 4f * Time.deltaTime);
         }
         else
         {

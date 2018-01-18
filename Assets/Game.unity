@@ -1010,9 +1010,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Spawns:
   - Enemy: {fileID: 114193368808967062, guid: f374052c13127294692dcb2af3d052ea, type: 2}
-    Amount: 10
+    Amount: 1
   - Enemy: {fileID: 114084489041941624, guid: 76bd5a03f69cefb408e91a510ab95ac5, type: 2}
-    Amount: 5
+    Amount: 1
   SpawnPoints:
   - {fileID: 1277755188}
   - {fileID: 351056517}
@@ -1608,11 +1608,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Spawns:
   - Enemy: {fileID: 114193368808967062, guid: f374052c13127294692dcb2af3d052ea, type: 2}
-    Amount: 30
+    Amount: 1
   - Enemy: {fileID: 114084489041941624, guid: 76bd5a03f69cefb408e91a510ab95ac5, type: 2}
-    Amount: 20
+    Amount: 1
   - Enemy: {fileID: 114233212059799744, guid: 7c4f1ce3bc093554a801eabaa708ad58, type: 2}
-    Amount: 30
+    Amount: 1
   - Enemy: {fileID: 114273085304724358, guid: 59d28a1f207f2364a9cbca562a444438, type: 2}
     Amount: 1
   SpawnPoints:
@@ -1911,11 +1911,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Spawns:
   - Enemy: {fileID: 114193368808967062, guid: f374052c13127294692dcb2af3d052ea, type: 2}
-    Amount: 15
+    Amount: 1
   - Enemy: {fileID: 114084489041941624, guid: 76bd5a03f69cefb408e91a510ab95ac5, type: 2}
-    Amount: 10
+    Amount: 1
   - Enemy: {fileID: 114233212059799744, guid: 7c4f1ce3bc093554a801eabaa708ad58, type: 2}
-    Amount: 10
+    Amount: 1
   SpawnPoints:
   - {fileID: 1277755188}
   - {fileID: 351056517}

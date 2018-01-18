@@ -19,7 +19,7 @@ public class Projectile : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
         Destructable destructable = other.transform.GetComponent<Destructable>();
-        if (destructable != null)
+        if (destructable != null && destructable.gameObject != Player.Instance.gameObject)
             destructable.TakeDamage(damage, transform.position);
         Destroy(gameObject);
     }

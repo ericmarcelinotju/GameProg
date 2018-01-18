@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 114233212059799744}
   m_Layer: 0
   m_Name: Penguin
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -651,7 +651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aaba69bdcad2644f8b2353bc1d3fa76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
+  movementSpeed: 5
   rotationalDamp: 0.5
   detectionDistance: 10
   offset: 2.5

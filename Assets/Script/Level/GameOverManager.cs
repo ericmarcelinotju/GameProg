@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class GameOverManager : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class GameOverManager : MonoBehaviour
     {
         if (!Player.Instance.PlayerHealth.isAlive)
         {
+            File.WriteAllLines("score.txt", new string[] { ScoreController.score + "" });
             anim.SetTrigger("GameOverTrigger");
 
             restartTimer += Time.deltaTime;

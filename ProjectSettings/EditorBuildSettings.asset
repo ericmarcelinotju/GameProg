@@ -14,3 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game.unity
     guid: 494f64df9ccea024a9d1640c2d5bf39f
+  - enabled: 1
+    path: Assets/Ending.unity
+    guid: 3886b741a5874e4478e7df7adf70a04e
