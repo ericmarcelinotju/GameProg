@@ -1,0 +1,15 @@
+Assets:
+https://www.assetstore.unity3d.com/en/#!/content/40756
+https://www.assetstore.unity3d.com/en/#!/content/82208
+https://www.assetstore.unity3d.com/en/#!/content/36825
+https://www.assetstore.unity3d.com/en/#!/content/100397
+
+Tutorials:
+https://unity3d.com/learn/tutorials/s/survival-shooter-tutorial
+https://www.youtube.com/watch?v=ZLpX0whJjGk&list=PLJfktYG5YLJGK-ROk1Gj1_i8AtnIyeKTs&index=2
+https://www.youtube.com/watch?v=_waFnRA32jg&list=PLJfktYG5YLJGK-ROk1Gj1_i8AtnIyeKTs&index=3
+https://www.youtube.com/watch?v=u_zn5zMjirc&list=PLJfktYG5YLJGK-ROk1Gj1_i8AtnIyeKTs&index=4
+https://www.youtube.com/watch?v=HIgtMqRg4VI&list=PLJfktYG5YLJGK-ROk1Gj1_i8AtnIyeKTs&index=5
+https://www.youtube.com/watch?v=3QLojhVOM7Q&index=6&list=PLJfktYG5YLJGK-ROk1Gj1_i8AtnIyeKTs
+https://www.youtube.com/watch?v=kwrp5BYdqNk&index=7&list=PLJfktYG5YLJGK-ROk1Gj1_i8AtnIyeKTs
+https://www.youtube.com/watch?v=MVb3FOwTLaM&index=8&list=PLJfktYG5YLJGK-ROk1Gj1_i8AtnIyeKTs
